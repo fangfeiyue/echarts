@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400px" height="300px">
+        您的浏览器不支持canvas标签
+    </canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext("2d");
+        
+        // 开始一个新的绘制路径
+        ctx.beginPath();
+        
+        // 设置弧线的颜色
+        ctx.strokeStyle='blue';
+
+        var circle = {
+            x: 100, // 圆心的x坐标
+            y: 100, // 圆心的y坐标
+            r: 50   // 圆的半径
+        };
+
+        ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, false);
+        
+        ctx.stroke();
+    </script>
+</body>
+</html>
